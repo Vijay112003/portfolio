@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+        body {
+            font-family:'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        section {
+            padding: 20px;
+            margin: 10px;
+        }
+        .skills, .projects {
+            list-style-type: none;
+            padding: 0;
+        }
+        .skills li, .projects li {
+            margin: 5px 0;
+        }
+        input:focus, textarea:focus {
+            border-color: #ffffff;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+            outline: none;
+        }
+        footer {
+            margin-top: 5px;
+        }
+        #icons, #links :hover{
+            box-shadow: 0 0 15px rgba(0, 128, 128, 0.8), 0 0 30px rgba(0, 128, 128, 0.6);
+        }
+    </style>
+</head>
+<body>
+    
+
+    <nav id="navbar" style="background-color: #444; color: white; padding: 10px 0; text-align: center; 
+            position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <a id="links" href="#home" style="color: white; text-decoration: none; margin: 0 15px; transition: box-shadow 0.3s ease, transform 0.3s ease; transition-delay: 0.1s;" class="active">
+            Home
+            </a>
+            <a id="links" href="#academics" style="color: white; text-decoration: none; margin: 0 15px; transition: box-shadow 0.3s ease, transform 0.3s ease; transition-delay: 0.1s;">
+            Academics
+            </a>
+            <a id="links" href="#skills" style="color: white; text-decoration: none; margin: 0 15px; transition: box-shadow 0.3s ease, transform 0.3s ease; transition-delay: 0.1s;">
+            Skills
+            </a>
+            <a id="links" href="#projects" style="color: white; text-decoration: none; margin: 0 15px; transition: box-shadow 0.3s ease, transform 0.3s ease; transition-delay: 0.1s;">
+            Projects
+            </a>
+            <a id="links" href="#contact" style="color: white; text-decoration: none; margin: 0 15px; transition: box-shadow 0.3s ease, transform 0.3s ease; transition-delay: 0.1s;">
+            Contact
+            </a>
+            <style>
+                #links.active {
+                    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.6);
+                    border-radius: 5px;
+                    transform: scale(1.1);
+                }
+            </style>
+            <script>
+                const links = document.querySelectorAll('#links');
+                links.forEach(link => {
+                    link.addEventListener('click', () => {
+                        links.forEach(l => l.classList.remove('active'));
+                        link.classList.add('active');
+                    });
+                });
+            </script>
+        </div>
+        <style>
+            #links:hover {
+            box-shadow: 0 0 15px rgba(0, 128, 128, 0.8), 0 0 30px rgba(0, 128, 128, 0.6);
+            border-radius: 75px;
+            transform: scale(1.1);
+            transition-delay: 0.1s;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+            }
+        </style>
+    </nav>
+    <style>
+        #navbar:hover {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.6);
+        }
+    </style>
+    <br>
+    <header id="head">
+        <h1>
+            <a href="index.html" style="color: white; text-decoration: none; text-shadow: 0 0 10px #084775, 0 0 20px #046e04, 0 0 30px #4b634b;">
+            Vijay Sarathi G
+            </a>
+        </h1>
+        <div style="margin-right: 15px;">
+            <a id="icons" href="https://www.instagram.com/naan_vijay._/" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: none;">
+            <i class="bi bi-instagram" style="font-size: 24px; vertical-align: middle;"></i>
+            </a>
+            <a id="icons" href="https://www.linkedin.com/in/vijay-sarathi-g-493033241/" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: none; margin-left: 15px;">
+            <i class="bi bi-linkedin" style="font-size: 24px; vertical-align: middle;"></i>
+            </a>
+            <a id="icons" href="https://github.com/Vijay112003" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: none; margin-left: 15px;">
+            <i class="bi bi-github" style="font-size: 24px; vertical-align: middle;"></i>
+            </a>
+        </div>
+    </header>
+    <style>
+        #head:hover {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.6);
+        border-radius: 75px;
+        transform: scale(1.1);
+            transition-delay: 0.1s;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+    </style>
+
+<br><br>
+    <section id="home" style="display: flex; justify-content: center; align-items: center; height: 80vh; margin: 0; padding: 50px 0;">
+        <div id="content" style="display: flex; background-color: #f9f9f9; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 20px; border-radius: 8px; max-width: 800px; align-items: center; transition: box-shadow 0.3s ease-in-out;">
+            <img src="./assets/imgs/profile.jpg" alt="Profile Photo" style="width: 180px; height: 180px; border-radius: 50%; margin-right: 20px;">
+            <div style="text-align: left;">
+                <h3>Vijay Sarathi G</h3>
+                <p><strong>Bachelor of Engineering</strong></p>
+                <p>Software Developer</p>
+                <h2>Who Am I?</h2>
+                <p>I am a dedicated software engineer with strong problem-solving skills and a commitment to writing clean, efficient code. With a robust foundation in computer science and extensive hands-on experience, I excel in dynamic environments, working collaboratively with teams to deliver cutting-edge solutions that surpass expectations.</p>
+                <p>I am honored to have been awarded the title of Mr.CSE in the year 2024 at our college, a recognition that underscores my dedication and contributions to the field of computer science.</p>
+            </div>
+        </div>
+        <style>
+            #home:hover {
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.6);
+            border-radius: 75px;
+            transform: scale(1.1);
+            transition-delay: 0.1s;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+            }
+        </style>
+    </section>
+    
+    
+    
+    <section id="academics" style="text-align: center; padding: 50px 0;">
+        <h2>Academics</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; align-items: center; margin: 0 auto; max-width: 900px;">
+            <div style="background-color: #f9f9f9; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 20px; border-radius: 8px; width: 300px;">
+                <h3>SSLC</h3>
+                <p><strong>Institution:</strong> ST.Antony's Higher Secondary School</p>
+                <p><strong>Percentage:</strong> 83.6%</p>
+            </div>
+            <div style="background-color: #f9f9f9; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 20px; border-radius: 8px; width: 300px;">
+                <h3>HSC</h3>
+                <p><strong>Institution:</strong> ST.Antony's Higher Secondary School</p>
+                <p><strong>Percentage:</strong> 89.9%</p>
+            </div>
+            <div style="background-color: #f9f9f9; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 20px; border-radius: 8px; width: 300px;">
+                <h3>B.E</h3>
+                <p><strong>Institution:</strong> Chettinad College of Engineering & Technology</p>
+                <p><strong>Percentage:</strong> 82%</p>
+            </div>
+        </div>
+    </section>
+    
+    <style>
+        #academics:hover {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.6);
+            border-radius: 75px;
+            transform: scale(1.1);
+            transition-delay: 0.1s;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+    </style>
+
+    <section id="skills"><br><br>
+        <h2 style="text-align: center;">Skills</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+            <div style="background-color: #f9f9f9; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 20px; border-radius: 8px; width: 300px; text-align: center;">
+                <h3>Frontend Development</h3>
+                <ul style="list-style-type: none; padding: 0;">
+                    <li>HTML (24 months)</li>
+                    <li>CSS (24 months)</li>
+                    <li>JavaScript (18 months)</li>
+                    <li>React (12 months)</li>
+                </ul>
+            </div>
+            <div style="background-color: #f9f9f9; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 20px; border-radius: 8px; width: 300px; text-align: center;">
+                <h3>Backend Development</h3>
+                <ul style="list-style-type: none; padding: 0;">
+                    <li>Python (24 months)</li>
+                    <li>Node.js (12 months)</li>
+                    <li>Express.js (12 months)</li>
+                </ul>
+            </div>
+            <div style="background-color: #f9f9f9; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 20px; border-radius: 8px; width: 300px; text-align: center;">
+                <h3>Database Management</h3>
+                <ul style="list-style-type: none; padding: 0;">
+                    <li>MySQL (18 months)</li>
+                    <li>MongoDB (12 months)</li>
+                </ul>
+            </div>
+            <div style="background-color: #f9f9f9; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 20px; border-radius: 8px; width: 300px; text-align: center;">
+                <h3>Other Skills</h3>
+                <ul style="list-style-type: none; padding: 0;">
+                    <li>Git (24 months)</li>
+                    <li>REST APIs (18 months)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <style>
+        #skills:hover {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.6);
+            border-radius: 75px;
+            transform: scale(1.1);
+            transition-delay: 0.1s;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+    </style>
+<br><br>
+    <section id="projects" style="text-align: center; padding: 50px 0;">
+        <h2>Projects</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; max-width: 960px; margin: 0 auto;">
+            <div style="background-color: #f9f9f9; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 20px; border-radius: 8px; text-align: center;">
+                <img src="./assets/proj/quiz.png" alt="Online Quiz" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px;">
+                <h3>Online Quiz</h3>
+                <p><strong>Domain:</strong> Web Development</p>
+                <button style="padding: 10px 20px; background-color: #333; color: white; border: none; cursor: pointer;">
+                    <a href="https://github.com/yourusername/portfolio-website" target="_blank" style="color: white; text-decoration: none;">Source</a>
+                </button>
+            </div>
+            <div style="background-color: #f9f9f9; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 20px; border-radius: 8px; text-align: center;">
+                <img src="./assets/proj/calc.png" alt="DIGI CalC" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px;">
+                <h3>DIGI CalC</h3>
+                <p><strong>Domain:</strong> Software Development</p>
+                <button style="padding: 10px 20px; background-color: #333; color: white; border: none; cursor: pointer;">
+                    <a href="https://github.com/yourusername/portfolio-website" target="_blank" style="color: white; text-decoration: none;">Source</a>
+                </button>    
+            </div>
+            <div style="background-color: #f9f9f9; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 20px; border-radius: 8px; text-align: center;">
+                <img src="./assets/proj/Mobile.png" alt="Mobile Point" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px;">
+                <h3>Mobile Point</h3>
+                <p><strong>Domain:</strong> Software Development</p>
+                <button style="padding: 10px 20px; background-color: #333; color: white; border: none; cursor: pointer;">
+                    <a href="https://github.com/yourusername/portfolio-website" target="_blank" style="color: white; text-decoration: none;">Source</a>
+                </button>
+            </div>
+            <div style="background-color: #f9f9f9; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 20px; border-radius: 8px; text-align: center;">
+                <img src="./assets/proj/OJPS.png" alt="Online Job Portal System" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px;">
+                <h3>Online Job Portal System</h3>
+                <p><strong>Domain:</strong> Software Development</p>
+                <button style="padding: 10px 20px; background-color: #333; color: white; border: none; cursor: pointer;">
+                    <a href="https://github.com/yourusername/portfolio-website" target="_blank" style="color: white; text-decoration: none;">Source</a>
+                </button>
+            </div>
+            <div style="background-color: #f9f9f9; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 20px; border-radius: 8px; text-align: center;">
+                <img src="./assets/proj/abs.png" alt="Absentees & Late Comers Alert System" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px;">
+                <h3>Absentees & Late Comers Alert System</h3>
+                <p><strong>Domain:</strong> Web Development</p>
+                <button style="padding: 10px 20px; background-color: #333; color: white; border: none; cursor: pointer;">
+                    <a href="https://github.com/yourusername/portfolio-website" target="_blank" style="color: white; text-decoration: none;">Source</a>
+                </button>
+            </div>
+            <div style="background-color: #f9f9f9; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 20px; border-radius: 8px; text-align: center;">
+                <img src="./assets/proj/movie.png" alt="Absentees & Late Comers Alert System" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px;">
+                <h3>Movie Recommdation System</h3>
+                <p><strong>Domain:</strong> Web Development</p>
+                <button style="padding: 10px 20px; background-color: #333; color: white; border: none; cursor: pointer;">
+                    <a href="https://github.com/yourusername/portfolio-website" target="_blank" style="color: white; text-decoration: none;">Source</a>
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <style>
+        #projects:hover {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.6);
+            border-radius: 75px;
+            transform: scale(1.1);
+            transition-delay: 0.1s;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+    </style>
+
+    <section id="contact"><br><br>
+        <h2 style="text-align: center;">Contact Me</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start;">
+            <div style="flex: 0 0 50%; max-width: 50%; box-sizing: border-box; background-color: #f9f9f9; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 20px; border-radius: 8px; margin: auto;">
+                <h3 style="text-align: center;">Send a Message</h3>
+                <form action="#" method="post" style="display: flex; flex-direction: column; gap: 10px;">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px; transition: all 0.3s ease;">
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px; transition: all 0.3s ease;">
+                    
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px; transition: all 0.3s ease;">
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px; transition: all 0.3s ease;"></textarea>
+                    
+                    <div style="display: flex; gap: 10px; justify-content: center; margin-top: 10px;"></div>
+                        <button id="send" type="submit" style="padding: 10px 20px; background-color: #28323e; color: white; border: none; border-radius: 4px; cursor: pointer; transition: all 0.3s ease;">Submit</button>
+                        <button type="reset" style="padding: 10px 20px; background-color: #6c757d; color: white; border: none; border-radius: 4px; cursor: pointer; transition: all 0.3s ease;">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        #contact:hover {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.6);
+            border-radius: 75px;
+            transform: scale(1.1);
+            transition-delay: 0.1s;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+    </style> 
+<br><br>
+    <footer>
+        <p>&copy; 2025 Vijay. All rights reserved.</p>
+        <div style="margin-right: 15px;">
+            <a id="icons" href="https://www.instagram.com/naan_vijay._/" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: none;">
+            <i class="bi bi-instagram" style="font-size: 24px; vertical-align: middle;"></i>
+            </a>
+            <a id="icons" href="https://www.linkedin.com/in/vijay-sarathi-g-493033241/" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: none; margin-left: 15px;">
+            <i class="bi bi-linkedin" style="font-size: 24px; vertical-align: middle;"></i>
+            </a>
+            <a id="icons" href="https://github.com/Vijay112003" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: none; margin-left: 15px;">
+            <i class="bi bi-github" style="font-size: 24px; vertical-align: middle;"></i>
+            </a>
+        </div>
+    </footer>
+    <script>
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault(); // Prevent default jump
+                const targetId = this.getAttribute('href').substring(1); // Get the section ID
+                const targetSection = document.getElementById(targetId);
+                
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>
