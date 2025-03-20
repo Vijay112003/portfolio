@@ -30,7 +30,7 @@
             margin: 5px 0;
         }
         input:focus, textarea:focus {
-            border-color: #ffffff;
+            border-color: #ff0000;
             box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
             outline: none;
         }
@@ -122,11 +122,19 @@
             transition-delay: 0.1s;
             transition: box-shadow 0.3s ease, transform 0.3s ease;
         }
+        #head i:hover {
+            box-shadow: 0 0 15px rgb(226, 128, 128), 0 0 30px rgb(220, 175, 175);
+        border-radius: 75px;
+        transform: scale(1.1);
+            transition-delay: 0.1s;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
     </style>
 
 <br><br>
     <section id="home" style="display: flex; justify-content: center; align-items: center; height: 80vh; margin: 0; padding: 50px 0;">
-        <div id="content" style="display: flex; background-color: #f9f9f9; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 20px; border-radius: 8px; max-width: 800px; align-items: center; transition: box-shadow 0.3s ease-in-out;">
+        <div id="content">
+        <div style="display: flex; background-color: #f9f9f9; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 20px; border-radius: 8px; max-width: 800px; align-items: center;">
             <img src="./assets/imgs/profile.jpg" alt="Profile Photo" style="width: 180px; height: 180px; border-radius: 50%; margin-right: 20px;">
             <div style="text-align: left;">
                 <h3>Vijay Sarathi G</h3>
@@ -137,33 +145,40 @@
                 <p>I am honored to have been awarded the title of Mr.CSE in the year 2024 at our college, a recognition that underscores my dedication and contributions to the field of computer science.</p>
             </div>
         </div>
-        <style>
-            #home:hover {
-                box-shadow: 0 0 15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.6);
-            border-radius: 75px;
-            transform: scale(1.1);
-            transition-delay: 0.1s;
-            transition: box-shadow 0.3s ease, transform 0.3s ease;
-            }
-        </style>
+    </div>
     </section>
-    
+    <style>
+        #content:hover {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.6);
+        border-radius: 75px;
+        transform: scale(1.1);
+        transition-delay: 0.9s;
+        transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+        #content img:hover {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.6);
+        border-radius: 75px;
+        transform: scale(1.1);
+        transition-delay: 0.9s;
+        transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+    </style>
     
     
     <section id="academics" style="text-align: center; padding: 50px 0;">
         <h2>Academics</h2>
         <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; align-items: center; margin: 0 auto; max-width: 900px;">
-            <div style="background-color: #f9f9f9; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 20px; border-radius: 8px; width: 300px;">
+            <div style="background-color: #f9f9f9; box-shadow: 0 4px 8px rgba(0,0,0, 0.2); padding: 20px; border-radius: 8px; width: 300px;">
                 <h3>SSLC</h3>
                 <p><strong>Institution:</strong> ST.Antony's Higher Secondary School</p>
                 <p><strong>Percentage:</strong> 83.6%</p>
             </div>
-            <div style="background-color: #f9f9f9; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 20px; border-radius: 8px; width: 300px;">
+            <div style="background-color: #f9f9f9; box-shadow: 0 4px 8px rgba(0,0,0, 0.2); padding: 20px; border-radius: 8px; width: 300px;">
                 <h3>HSC</h3>
                 <p><strong>Institution:</strong> ST.Antony's Higher Secondary School</p>
                 <p><strong>Percentage:</strong> 89.9%</p>
             </div>
-            <div style="background-color: #f9f9f9; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 20px; border-radius: 8px; width: 300px;">
+            <div style="background-color: #f9f9f9; box-shadow: 0 4px 8px rgba(0,0,0, 0.2); padding: 20px; border-radius: 8px; width: 300px;">
                 <h3>B.E</h3>
                 <p><strong>Institution:</strong> Chettinad College of Engineering & Technology</p>
                 <p><strong>Percentage:</strong> 82%</p>
@@ -172,12 +187,12 @@
     </section>
     
     <style>
-        #academics:hover {
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.6);
-            border-radius: 75px;
-            transform: scale(1.1);
-            transition-delay: 0.1s;
-            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        #academics div div:hover {
+            box-shadow: 0 0 15px rgb(0, 0, 0), 0 0 30px rgba(0, 0, 0, 0.6);
+        border-radius: 75px;
+        transform: scale(1.1);
+        transition-delay: 0.1s;
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
         }
     </style>
 
@@ -219,12 +234,12 @@
     </section>
     
     <style>
-        #skills:hover {
+        #skills div div:hover {
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.6);
-            border-radius: 75px;
-            transform: scale(1.1);
-            transition-delay: 0.1s;
-            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        border-radius: 75px;
+        transform: scale(1.1);
+        transition-delay: 0.1s;
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
         }
     </style>
 <br><br>
@@ -283,17 +298,23 @@
     </section>
     
     <style>
-        #projects:hover {
+        #projects div div:hover {
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.6);
-            border-radius: 75px;
-            transform: scale(1.1);
-            transition-delay: 0.1s;
-            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        border-radius: 75px;
+        transform: scale(1.1);
+        transition-delay: 0.1s;
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+        #projects button:hover {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.6);
+        transform: scale(1.1);
+        transition-delay: 0.1s;
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
         }
     </style>
 
     <section id="contact"><br><br>
-        <h2 style="text-align: center;">Contact Me</h2>
+        <h2 style="text-align: center;">Contact Me</h2><br>
         <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start;">
             <div style="flex: 0 0 50%; max-width: 50%; box-sizing: border-box; background-color: #f9f9f9; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 20px; border-radius: 8px; margin: auto;">
                 <h3 style="text-align: center;">Send a Message</h3>
@@ -320,16 +341,24 @@
     </section>
 
     <style>
-        #contact:hover {
+        #contact div div:hover {
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.6);
-            border-radius: 75px;
-            transform: scale(1.1);
-            transition-delay: 0.1s;
-            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        border-radius: 75px;
+        transform: scale(1.1);
+        transition-delay: 0.1s;
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        #contact button:hover {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.6);
+        border-radius: 75px;
+        transform: scale(1.1);
+        transition-delay: 0.1s;
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
         }
     </style> 
 <br><br>
-    <footer>
+    <footer id="footer">
         <p>&copy; 2025 Vijay. All rights reserved.</p>
         <div style="margin-right: 15px;">
             <a id="icons" href="https://www.instagram.com/naan_vijay._/" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: none;">
@@ -343,6 +372,15 @@
             </a>
         </div>
     </footer>
+    <style>
+        #footer i:hover {
+            box-shadow: 0 0 15px rgb(226, 128, 128), 0 0 30px rgb(220, 175, 175);
+        border-radius: 75px;
+        transform: scale(1.1);
+            transition-delay: 0.1s;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+    </style>
     <script>
         document.querySelectorAll('nav a').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
